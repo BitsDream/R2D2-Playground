@@ -1,0 +1,5 @@
+setDomePosition(angle: -100)
+wait(for: 1.0)
+setDomePosition(angle: 100)
+wait(for: 1.0)
+play(sound:R2D2Sound.cautious)

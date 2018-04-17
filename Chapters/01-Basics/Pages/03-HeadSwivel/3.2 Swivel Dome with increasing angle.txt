@@ -1,0 +1,8 @@
+var angle = 10
+while (angle <= 100) {
+	setDomePosition(angle: -angle)
+      wait(for: 1.0)
+      setDomePosition(angle: angle)
+      wait(for: 1.0)
+      angle += 10
+}

@@ -1,0 +1,12 @@
+func escape() {
+    let angle = 0
+    let speed = 1
+    var way = [[0,80], [90,100], [180,120], [270,140], [45,255]]
+    setStance(R2D2Stance.tripod )
+    for waypoint in way {
+        roll(heading: waypoint[angle], speed: waypoint[speed])
+        wait(for: 2.0)
+    }
+    stopRoll()
+    play(sound: R2D2Sound.happy)
+}

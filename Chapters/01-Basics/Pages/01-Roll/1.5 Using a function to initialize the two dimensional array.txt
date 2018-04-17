@@ -1,0 +1,28 @@
+func makeWay(numberOfWayPoints: Int) -> [[Int]] {
+    let angle = 0
+    let speed = 1
+    var way = Array(repeating: Array(repeating: 0, count: 2), count: numberOfWayPoints)
+    var angleValue = 0
+    var speedValue = 80
+    for i in 0 ... numberOfWayPoints-1 {
+        way[i][angle] = angleValue
+        way[i][speed] = speedValue
+        angleValue += Int(360/numberOfWayPoints)
+        speedValue += Int(175/numberOfWayPoints)
+    }
+    return way
+}
+
+func escape() {
+    let angle = 0
+    let speed = 1
+    var way = makeWay(numberOfWayPoints: 6)
+    
+    setStance(R2D2Stance.tripod )
+    for waypoint in way {
+        roll(heading: waypoint[angle], speed: waypoint[speed])
+        wait(for: 1.0)
+    }
+    stopRoll()
+    play(sound: R2D2Sound.happy)
+}

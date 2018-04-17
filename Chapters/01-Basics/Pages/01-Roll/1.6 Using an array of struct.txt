@@ -1,0 +1,35 @@
+struct leg {
+    var angle: Int
+    var speed: Int
+    var wait: Double
+}
+
+func makeWay(numberOfWayPoints: Int) -> [leg] {
+    var way = [leg]()
+    var angleValue = 0
+    var speedValue = 80
+    var waitValue = 1.0
+    var thisLeg = leg(angle: 0, speed: 0, wait: 0.0)
+    
+    for i in 0 ... numberOfWayPoints-1 {
+        thisLeg.angle = angleValue
+        thisLeg.speed = speedValue
+        thisLeg.wait = round((waitValue + (Double(i)/Double(numberOfWayPoints)))*10)/10
+        angleValue += Int(360/numberOfWayPoints)
+        speedValue += Int(175/numberOfWayPoints)
+        way.append(thisLeg)
+    }
+    return way
+}
+
+func escape() {
+    var way = makeWay(numberOfWayPoints: 6)
+    
+    setStance(R2D2Stance.tripod )
+    for waypoint in way {
+        roll(heading: waypoint.angle, speed: waypoint.speed)
+        wait(for: waypoint.wait)
+    }
+    stopRoll()
+    play(sound: R2D2Sound.happy)
+}

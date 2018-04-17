@@ -1,0 +1,7 @@
+func escape() {
+    setStance(R2D2Stance.tripod)
+    roll(heading: 0, speed:80)
+    wait(for: 1.0)
+    stopRoll()
+    play(sound: R2D2Sound.happy)
+}

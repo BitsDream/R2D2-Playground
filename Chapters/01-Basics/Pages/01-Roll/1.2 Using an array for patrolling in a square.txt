@@ -1,0 +1,10 @@
+func escape() {
+    let angle = [0, 90, 180, 270]
+    setStance(R2D2Stance.tripod )
+    for a in angle {
+        roll(heading: a, speed:80)
+        wait(for: 1)
+    }
+    stopRoll()
+    play(sound: R2D2Sound.happy)
+}

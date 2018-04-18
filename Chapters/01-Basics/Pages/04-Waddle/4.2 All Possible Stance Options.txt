@@ -1,0 +1,10 @@
+func waddle() {
+	setStance(R2D2Stance.tripod)
+	wait(for: 1.0)
+	setStance(R2D2Stance.bipod)
+	wait(for: 1.0)
+	setStance(R2D2Stance.waddle )
+	wait(for: 3.0)
+	setStance(R2D2Stance.stop )
+	play(sound:R2D2Sound.scared)
+}

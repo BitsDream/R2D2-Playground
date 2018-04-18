@@ -1,0 +1,19 @@
+func driveCircle() {
+    var angle = 0
+    setStance(R2D2Stance.tripod)
+    while angle &lt;= 360 {
+        roll(heading: angle, speed: 80)
+        wait(for: 2.0)
+        angle += 36
+    }
+    stopRoll()
+    setStance(R2D2Stance.bipod)
+}
+
+func waddle() {
+	driveCircle()
+	setStance(R2D2Stance.waddle )
+	wait(for: 3.0)
+	setStance(R2D2Stance.stop )
+	play(sound:R2D2Sound.scared)
+}

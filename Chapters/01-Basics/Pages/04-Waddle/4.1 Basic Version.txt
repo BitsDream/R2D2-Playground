@@ -1,0 +1,6 @@
+func waddle() {	
+	setStance(R2D2Stance.waddle )
+	wait(for: 3)
+   	setStance(R2D2Stance.stop )
+   	play(sound:R2D2Sound.scared)
+}

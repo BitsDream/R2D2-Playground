@@ -1,5 +1,5 @@
-#R2D2-Playground
-#Intro
+__R2D2-Playground__  
+#Intro  
 In this R2D2 Swift Playground three tehchnology vendors come together:
 - Apple for the Swift programming language and the Swift Playground technology
 - Sphero the maker of R2D2
@@ -17,19 +17,19 @@ Swift Playgrounds for iOS is a easy and save learning environment. In Playground
 you can explore some features of Swift. It is less complex.  
 Swift Playgrounds fin Xcode on the Mac offer a wider variety of possibilities.  
 
-#Ressources
-##Apple
-Swift at Apple: https://www.apple.com/swift/
-Swift developer website: https://developer.apple.com/swift/
-Swift Playgrounds developber website: https://developer.apple.com/swift-playgrounds/
-Swift programming language documentation: https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/index.html
-Swift Playgrounds format documentation: https://developer.apple.com/library/content/documentation/Xcode/Conceptual/swift_playgrounds_doc_format/index.html
+#Ressources  
+##Apple  
+Swift at Apple: https://www.apple.com/swift/  
+Swift developer website: https://developer.apple.com/swift/  
+Swift Playgrounds developber website: https://developer.apple.com/swift-playgrounds/  
+Swift programming language documentation: https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/index.html  
+Swift Playgrounds format documentation: https://developer.apple.com/library/content/documentation/Xcode/Conceptual/swift_playgrounds_doc_format/index.html  
 
 Swift.org: https://swift.org/
 
-##Sphero
+##Sphero  
 Sphero offers the SpheroEDU App and learning environment which allows you to write programs for R2D2 too.  
 The SpheroEDU App allows very easy programming by drawing for little children. More sophisticated code can be created by dragging codeblocks into a program. This already gives full access to all of R2D2s features. Finally you can write programs for R2D2 in the Java programming language within the SpheroEDU App.  
 
-##Fingerfood Studios 
-https://www.fingerfoodstudios.com/case-study/sphero-r2d2/
+##Fingerfood Studios  
+https://www.fingerfoodstudios.com/case-study/sphero-r2d2/  

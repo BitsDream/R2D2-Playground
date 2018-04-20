@@ -28,8 +28,21 @@ Swift Playgrounds format documentation: https://developer.apple.com/library/cont
 Swift.org: https://swift.org/
 
 ##Sphero  
-Sphero offers the SpheroEDU App and learning environment which allows you to write programs for R2D2 too.  
-The SpheroEDU App allows very easy programming by drawing for little children. More sophisticated code can be created by dragging codeblocks into a program. This already gives full access to all of R2D2s features. Finally you can write programs for R2D2 in the Java programming language within the SpheroEDU App.  
+Sphero offers the SpheroEDU App and learning environment which allows you to 
+write programs for R2D2 too.  
+The SpheroEDU App allows very easy programming by drawing for little children. 
+More sophisticated code can be created by dragging codeblocks into a program. 
+This already gives full access to all of R2D2s features. Finally you can write 
+programs for R2D2 in the Java programming language within the SpheroEDU App.  
 
+There is a Sphero StarWars App in the App Store. But I recommend the SpheroEDU App  
+that gives you the possibility to write your own programs for R2D2. Actually in the  
+SpheroEDU App you can go beyond what's possible in the R2D2 by Sphero Swift Playground.  
+One example is the LEDs that are limited to two colors in the playground but can be  
+set to any RBG color in SpheroEDU.  
+
+SpheroEDU website: https://edu.sphero.com  
+R2D2 by Sphero website: https://www.sphero.com/starwars/r2d2  
+  
 ##Fingerfood Studios  
 https://www.fingerfoodstudios.com/case-study/sphero-r2d2/  

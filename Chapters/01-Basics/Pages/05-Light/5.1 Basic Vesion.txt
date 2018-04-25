@@ -1,0 +1,17 @@
+func flashLights() {
+    setLogicDisplayLeds(brightness: 255)
+    setHoloProjectorLed(brightness: 255)
+    wait(for: 1.0)
+    setHoloProjectorLed(brightness: 0)
+    setLogicDisplayLeds(brightness: 0)
+    wait(for: 1.0)
+}
+
+func startMessage() {
+    setFrontPSILed(color: FrontPSIColor.blue)
+    setBackPSILed(color: BackPSIColor.yellow)
+    play(sound: R2D2Sound.talking)
+    for index in 1 ... 5 {
+        flashLights()
+    }
+}

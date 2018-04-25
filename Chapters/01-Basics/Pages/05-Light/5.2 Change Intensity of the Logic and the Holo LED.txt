@@ -1,0 +1,22 @@
+let off=0
+let on=255
+
+func flashLights(_ index: Int,_ iterations: Int) {
+    let delay=0.1
+    setLogicDisplayLeds(brightness: (index*on/iterations))
+    setHoloProjectorLed(brightness:(index*on/iterations))
+    wait(for: delay)
+    setHoloProjectorLed(brightness:off)
+    setLogicDisplayLeds(brightness:off)
+    wait(for: delay)
+}
+
+func startMessage() {
+    let iterations=51
+    setFrontPSILed(color: FrontPSIColor.blue)
+    setBackPSILed(color: BackPSIColor.green)
+    play(sound: R2D2Sound.talking)
+    for index in 1 ... iterations {
+        flashLights(index, iterations)
+    }
+}

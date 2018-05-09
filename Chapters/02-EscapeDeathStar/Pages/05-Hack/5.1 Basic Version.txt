@@ -1,0 +1,14 @@
+func hackDoor() {
+    var minCode = 0
+    var maxCode = 9999
+    while doorState != .unlocked {
+        let newCode = (minCode + maxCode) / 2
+        enter(code: newCode)
+        if doorState == .codeTooLow {
+            minCode = newCode
+        }
+        if doorState == .codeTooHigh {
+            maxCode = newCode
+        }
+    }
+}

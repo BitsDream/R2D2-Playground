@@ -1,0 +1,15 @@
+let distanceThreshold = 50.0
+let angleThreshold = 10 // now an integer
+
+func onTouch(distance: Double, angle: Double) {
+    if distance > distanceThreshold{
+        switch Int(angle){
+        case (-180 ... -Int(angleThreshold)):
+            turnRight()
+        case (Int(angleThreshold) ... 180):
+            turnLeft()
+        default:
+            moveForward()
+        }
+    }
+}

@@ -1,0 +1,33 @@
+let veryClose = 400.0
+let close = 800.0
+enum dist {
+    case farAway 
+    case close 
+    case veryClose
+}
+
+func howFar (distance: Double) -> dist { 
+    var d = dist.farAway
+    if distance <= veryClose {
+        d = dist.veryClose
+    }
+    if distance > veryClose && distance <= close {
+        d = dist.close
+    }
+    return d
+}
+
+func stormtrooperNearby(distance: Double) {
+    let d = howFar(distance: distance)
+    switch d {
+    case .close:
+        setStance(R2D2Stance.stop)
+        play(sound: R2D2Sound.scared)
+    case .veryClose:
+        play(sound: R2D2Sound.scared)
+        setStance(R2D2Stance.waddle)
+    default:
+        setStance(R2D2Stance.stop)
+        play(sound: R2D2Sound.happy)
+    }
+}

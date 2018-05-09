@@ -1,0 +1,16 @@
+func domeLeft(){
+    setDomePosition(angle: -100)
+    play(sound: R2D2Sound.scan)
+    wait(for: 1.0)
+}
+func domeRight(){
+    setDomePosition(angle: 100)
+    play(sound: R2D2Sound.scan)
+    wait(for: 1.0)
+}
+func scan() {
+    while isScanning {
+        domeLeft()
+        domeRight()
+    }
+}

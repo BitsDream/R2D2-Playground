@@ -1,0 +1,27 @@
+let veryClose = 400.0
+let close = 800.0
+let myDistance = ["farAway", "close", "veryClose"]
+
+func howFar (distance: Double) -> String {
+    if distance <= veryClose {
+        return myDistance[2]
+    }
+    if distance > veryClose && distance <= close {
+        return myDistance[1]
+    }
+    return myDistance[0]
+}
+
+func stormtrooperNearby(distance: Double) {
+    switch howFar(distance: distance) {
+    case "veryClose":
+        play(sound: R2D2Sound.scared)
+        setStance(R2D2Stance.waddle)
+    case "close":
+        play(sound: R2D2Sound.scared)
+        setStance(R2D2Stance.stop)
+    default:
+        play(sound: R2D2Sound.happy)
+        setStance(R2D2Stance.stop)
+    }
+}

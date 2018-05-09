@@ -1,0 +1,10 @@
+func scan() {
+    while isScanning {
+        setDomePosition(angle: -100)
+        play(sound: R2D2Sound.scan)
+        wait(for: 1.0)
+        setDomePosition(angle: 100)
+        play(sound: R2D2Sound.scan)
+        wait(for: 1.0)
+    }
+}

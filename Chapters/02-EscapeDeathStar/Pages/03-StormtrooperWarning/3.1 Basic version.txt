@@ -1,0 +1,17 @@
+let veryClose = 400.0
+let close = 800.0
+
+func stormtrooperNearby(distance: Double) {
+    if distance <= veryClose {
+        play(sound: R2D2Sound.scared)
+        setStance(R2D2Stance.waddle)
+    }
+    if (distance > veryClose) && (distance <= close) {
+        setStance(R2D2Stance.stop)
+        play(sound: R2D2Sound.scared)
+    }
+    if distance > close {
+        setStance(R2D2Stance.stop)
+        play(sound: R2D2Sound.happy)
+    }
+}

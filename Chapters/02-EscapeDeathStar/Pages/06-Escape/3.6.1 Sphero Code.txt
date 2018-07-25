@@ -1,0 +1,38 @@
+func stormtrooperNearby(distance: Double) {
+    play(sound: distance < 800.0 ? .cautious : .happy)
+    setStance(distance < 400.0 ? .waddle : .stop)
+}
+
+func scan() {
+    while isScanning {
+        play(sound: .scan)
+        setDomePosition(angle: 100)
+        wait(for: 1.0)
+        play(sound: .scan)
+        setDomePosition(angle: -100)
+        wait(for: 1.0)
+    }
+    
+    setDomePosition(angle: 0)
+}
+
+func hackDoor() {
+    var minCode = 0
+    var maxCode = 9999
+    
+    while doorState != .unlocked {
+        let newCode = (minCode + maxCode) / 2
+        
+        enter(code: newCode)
+        
+        if doorState == .codeTooLow {
+            minCode = newCode
+        }
+        
+        if doorState == .codeTooHigh {
+            maxCode = newCode
+        }
+    }
+    
+    play(sound: .joyful)
+}
